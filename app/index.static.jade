@@ -25,33 +25,34 @@ html
           i.icon
           span Messages
 
-      // Head
-      .news-head
-        h1 Top stories
-        .actions
-          a.search(href='')
-
-      // Sidebar
-      .news-listing
-        mixin item(i, headline)
-          .news-item
-            span.number= i
-            h2
-              a(href='#/article/'+i)= headline
-            p Submitted by anonymous
-            p 4h ago · 8 comments
+      .news-sidebar
+        // Head
+        .news-head
+          h1 Top stories
           .actions
-            a.comments(href='#/article/'+i)
+            a.search(href='')
 
-        +item(1, "Mars rover mistakenly lands on Venus instead")
-        +item(2, "The strong snake shouted, the bland shape smiled")
-        +item(3, "Eagles shouldn't test, a queen fought")
-        +item(4, "A coyote is crying, the violet snail has someone")
-        +item(5, "A rotten insertion spoke the soft snail to the force of nature")
-        +item(6, "The busy coffee is visiting, revolting dolphins shouldn't meet")
-        +item(7, "Nothing is following, mediators must give them to them")
-        +item(8, "Aviators speak chickens to them")
-        +item(9, "Cubes are changing us to themselves")
+        // Sidebar
+        .news-listing
+          mixin item(i, headline)
+            .news-item
+              span.number= i
+              h2
+                a(href='#/article/'+i)= headline
+              p Submitted by anonymous
+              p 4h ago · 8 comments
+            .actions
+              a.comments(href='#/article/'+i)
+
+          +item(1, "Mars rover mistakenly lands on Venus instead")
+          +item(2, "The strong snake shouted, the bland shape smiled")
+          +item(3, "Eagles shouldn't test, a queen fought")
+          +item(4, "A coyote is crying, the violet snail has someone")
+          +item(5, "A rotten insertion spoke the soft snail to the force of nature")
+          +item(6, "The busy coffee is visiting, revolting dolphins shouldn't meet")
+          +item(7, "Nothing is following, mediators must give them to them")
+          +item(8, "Aviators speak chickens to them")
+          +item(9, "Cubes are changing us to themselves")
 
       // Main content area
       .content-area

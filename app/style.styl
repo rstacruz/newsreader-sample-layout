@@ -1,9 +1,11 @@
 $line = #ddd
 $pad = 15px
-$accent = #1af
+$accent = #1af - 20%
 $gray = #808890
 $silver = #BDC3C7
 $midnight = #2C3E50 - 20%
+$black = #404040
+$xblack = #111
 
 $toolbar-width = 80px
 $heading-height = 50px
@@ -21,21 +23,50 @@ abs($top, $right, $bottom, $left)
   right: $right
 
 /*
- * layout
+ * layout, abs style
  */
 
-.news-head
-  abs: 0 auto auto $toolbar-width
-  width: 300px
+__.all
+  .app-toolbar
+    abs: 0 auto 0 0
+    width: $toolbar-width
 
-.news-listing
-  abs: $heading-height auto 0 $toolbar-width
-  width: 300px
- 
-.app-toolbar
-  abs: 0 auto 0 0
-  width: $toolbar-width
+  .news-sidebar
+    abs: 0 auto 0 $toolbar-width
+    width: 300px
 
-.content-area
-  abs: 0 0 0 (300px + $toolbar-width)
+  .news-head
+    abs: 0 0 auto 0
 
+  .news-listing
+    abs: 50px 0 0 0
+   
+  .content-area
+    abs: 0 0 0 (300px + $toolbar-width)
+
+/*
+ * layout, flexbox style
+ */
+
+.all
+  display: flex
+  abs: 0 0 0 0
+
+  .app-toolbar
+    flex: 0 0 $toolbar-width
+
+  .news-sidebar
+    flex: 1 1 30%
+    min-width: 200px
+    max-width: 300px
+    display: flex
+    flex-direction: column
+
+  .news-head
+    flex: 0 0 50px
+
+  .news-listing
+    flex: 1 0 auto
+
+  .content-area
+    flex: 1 0 70%

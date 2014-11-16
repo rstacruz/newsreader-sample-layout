@@ -23,15 +23,18 @@
     float: right
 
   .search
-    display: inline-block
-    vertical-align: middle
-    text-decoration: none
-    color: $accent
+    &
+      display: inline-block
+      vertical-align: middle
+      text-decoration: none
+      color: $accent
+
+    &:hover
+      color: $accent - 30%
 
     &:before
       position: relative
-      top: 2px
+      top: -3px
 
-      ion-icon()
-      content: '\f1d9'
+      ion-icon('ios7-search-strong')
       font-size: 24px

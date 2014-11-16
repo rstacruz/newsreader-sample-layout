@@ -1,13 +1,23 @@
+/*
+ * Comments
+ */
+
 .comment-item
   &
     margin: 20px 0
+
+  & + &
+    padding-top: 20px
+    border-top: solid 1px $line
 
   h4
     overflow: hidden
 
   h4 strong
     font-weight: bold
-    float: left
+    color: $xblack
+    font-size: 1.1em
 
   h4 em
-    float: right
+    color: $gray
+    margin-left: 8px
