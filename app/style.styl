@@ -1,0 +1,238 @@
+@import 'nib'
+@import './css/_global-reset'
+@import './css/_ionicons'
+@import url('http://code.ionicframework.com/ionicons/1.5.2/css/ionicons.min.css')
+
+
+$line = #ddd
+$pad = 15px
+$accent = #1af
+$gray = #808890
+$silver = #BDC3C7
+$midnight = #2C3E50
+
+$toolbar-width = 80px
+$heading-height = 50px
+
+*
+  box-sizing: border-box
+
+html
+  font-size: 14px
+  color: #333
+
+body, td, textarea, input
+  line-height: 1.5
+  font-family: source sans pro, sans-serif
+  font-size: 1em
+
+/*
+ * layout
+ */
+
+.news-head
+  position: absolute
+  left: $toolbar-width
+  width: 300px
+  top: 0
+  height: $heading-height
+  line-height: @height
+  border-bottom: solid 1px $line
+  border-right: solid 1px $line
+
+/*
+ * heading
+ */
+
+.news-head
+  &
+    padding: 0 $pad
+    overflow: hidden
+    
+  h1
+    float: left
+    font-weight: bold
+    color: #111
+    font-size: 1.05em
+
+  .actions
+    float: right
+
+  .search
+    display: inline-block
+    vertical-align: middle
+    text-decoration: none
+    color: $accent
+
+    &:before
+      position: relative
+      top: 2px
+
+      ion-icon()
+      content: '\f1d9'
+      font-size: 24px
+
+/*
+ * listnig
+ */
+
+.news-listing
+  position: absolute
+  left: $toolbar-width
+  width: 300px
+  bottom: 0
+  top: $heading-height
+  border-right: solid 1px $line
+
+  overflow-y: auto
+
+/*
+ * news item
+ */
+ 
+.news-item
+  &
+    padding: $pad
+    padding-left: $pad + 20px
+    padding-right: $pad + 20px
+    position: relative
+    line-height: 1.3
+
+  &:before
+    content: ''
+    display: block
+    position: absolute
+    right: $pad
+    top: 50%
+
+    ion-icon()
+    content: '\f154'
+    font-size: 24px
+    color: $line
+    margin-top: -12px
+
+  &:after
+    content: ''
+    display: block
+    position: absolute
+    left: $pad
+    right: 0
+    bottom: 0
+    height: 1px
+    background: $line
+
+  .number
+    position: absolute
+    left: $pad
+    top: $pad + 3px
+    color: $gray
+    font-size: 0.8em
+
+  a
+    font-weight: normal
+    font-size: 1.1em
+    color: $accent
+    text-decoration: none
+
+  p
+    color: $gray
+
+/*
+ *
+ */
+
+.news-toolbar
+  position: absolute
+  left: 0
+  top: 0
+  bottom: 0
+  width: $toolbar-width
+  background: $midnight
+  padding: 15px
+
+/*
+ *
+ */
+
+.news-content
+  position: absolute
+  left: 300px + $toolbar-width
+  top: 0
+  right: 0
+  bottom: 0
+
+  .container
+    padding: ($pad * 2) $pad
+    max-width: 600px
+    margin: 0 auto
+
+
+.news-heading
+  &
+    line-height: 1.5
+    background: mix($silver, white, 20%)
+
+  h1
+    font-size: 1.4em
+
+  .domain
+    color: $accent
+
+  p
+    color: $gray
+
+/*
+ * 
+ */
+
+.app-icon
+  display: block
+
+  width: 50px
+  height: 50px
+  text-align: center
+  line-height: @height
+
+  background: $accent
+  color: white
+
+  border-radius: 4px
+  font-size: 30px
+  font-weight: 300
+
+  margin-bottom: 30px
+
+.toolbar-button
+  &
+    padding: 15px 0
+    display: block
+    text-align: center
+    text-decoration: none
+    color: white
+
+  .icon:before
+    ion-icon()
+    font-size: 32px
+    color: #a0b0c0
+    content: '\f1c5'
+
+  &:hover .icon:before
+    color: mix($accent, white, 50%)
+
+  &.selected .icon:before
+    color: white
+
+  span
+    display: block
+    text-align: center
+    display: none
+
+  &:nth-of-type(2)
+    .icon:before
+      content: '\f286'
+  &:nth-of-type(3)
+    .icon:before
+      content: '\f1c1'
+  &:nth-of-type(4)
+    .icon:before
+      content: '\f28a'
