@@ -10,8 +10,25 @@
     padding-top: 20px
     border-top: solid 1px $line
 
+  &
+    clearfix()
+
+  &:before
+    content: ''
+    display: block
+    width: 30px
+    height: 30px
+    background: $midnight + 80%
+    float: left
+    margin-left: -30px - $pad
+    margin-top: 5px
+    border-radius: 2px
+
   h4
     overflow: hidden
+
+  h4:before
+    ion-icon
 
   h4 strong
     font-weight: bold
@@ -20,4 +37,4 @@
 
   h4 em
     color: $gray
-    margin-left: 8px
+    margin-left: 15px
