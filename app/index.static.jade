@@ -2,7 +2,7 @@ doctype html
 html
   head
     meta(charset='utf-8')
-    title Hello
+    title News reader
     link(rel='stylesheet' href='app.css')
 
   body
@@ -33,22 +33,29 @@ html
 
       // Sidebar
       .news-listing
-        each i in [0, 1, 2, 3, 4, 5, 6, 7, 8]
+        mixin item(i, headline)
           .news-item
-            span.number= i+1
+            span.number= i
             h2
-              a(href='')
-                | Mars rover mistakenly lands on Venus instead
-            p
-              | Submitted by anonymous
-            p
-              | 4h ago · 8 comments
+              a(href='')= headline
+            p Submitted by anonymous
+            p 4h ago · 8 comments
           .actions
-            a.comments(href='')
+            a.comments(href='#/article/'+i)
+
+        +item(1, "Mars rover mistakenly lands on Venus instead")
+        +item(2, "The strong snake shouted, the bland shape smiled")
+        +item(3, "Eagles shouldn't test, a queen fought")
+        +item(4, "A coyote is crying, the violet snail has someone")
+        +item(5, "A rotten insertion spoke the soft snail to the force of nature")
+        +item(6, "The busy coffee is visiting, revolting dolphins shouldn't meet")
+        +item(7, "Nothing is following, mediators must give them to them")
+        +item(8, "Aviators speak chickens to them")
+        +item(9, "Cubes are changing us to themselves")
 
       // Main content area
-      .news-content
-        .news-heading
+      .content-area
+        .article-heading
           .container
             h1
               | Mars rover mistakenly lands on Venus instead
@@ -57,9 +64,11 @@ html
             p.details
               Submitted by anonymous 8h ago
 
-        .news-comments
+        .article-comments
           .container
-            p
-              | The shape wasn't negative or the wonderful picture. Thrice, twice, they were themselves. The time of day was changing nothing to her yesterday. An eagle is wooden or the rhyme and reason. An African flamingo will have him tomorrow until she will be nicely light. She will run heavily. We will be sharply guilty.</p>
-            p
-              | She wasn't Romanian. A city can't speak itself to the vehicle until a horizontal park. He won't be allowing something for herself, and then she will be heavily impressive and mauve. Nicely, next to a guilty mongoose, because of something, a calling of the wild is herself.</p>
+            .comment-item
+              p
+                | The shape wasn't negative or the wonderful picture. Thrice, twice, they were themselves. The time of day was changing nothing to her yesterday. An eagle is wooden or the rhyme and reason. An African flamingo will have him tomorrow until she will be nicely light. She will run heavily. We will be sharply guilty.</p>
+            .comment-item
+              p
+                | She wasn't Romanian. A city can't speak itself to the vehicle until a horizontal park. He won't be allowing something for herself, and then she will be heavily impressive and mauve. Nicely, next to a guilty mongoose, because of something, a calling of the wild is herself.</p>
