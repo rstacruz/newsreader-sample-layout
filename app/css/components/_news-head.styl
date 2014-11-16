@@ -1,0 +1,37 @@
+/*
+ * Heading
+ * (Top stories, search)
+ */
+
+.news-head
+  &
+    padding: 0 $pad
+    overflow: hidden
+    border-bottom: solid 1px $line
+    border-right: solid 1px $line
+
+    height: $heading-height
+    line-height: @height
+    
+  h1
+    float: left
+    font-weight: bold
+    color: #111
+    font-size: 1.05em
+
+  .actions
+    float: right
+
+  .search
+    display: inline-block
+    vertical-align: middle
+    text-decoration: none
+    color: $accent
+
+    &:before
+      position: relative
+      top: 2px
+
+      ion-icon()
+      content: '\f1d9'
+      font-size: 24px

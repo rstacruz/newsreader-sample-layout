@@ -1,0 +1,51 @@
+/*
+ * Single news item in the sidebar
+ */
+
+.news-item
+  &
+    padding: $pad
+    padding-left: $pad + 20px
+    padding-right: $pad + 20px
+    position: relative
+    line-height: 1.3
+
+  &:before
+    content: ''
+    display: block
+    position: absolute
+    right: $pad
+    top: 50%
+
+    ion-icon()
+    content: '\f154'
+    font-size: 24px
+    color: $line
+    margin-top: -12px
+
+  &:after
+    content: ''
+    display: block
+    position: absolute
+    left: $pad
+    right: 0
+    bottom: 0
+    height: 1px
+    background: $line
+
+  .number
+    position: absolute
+    left: $pad
+    top: $pad + 3px
+    color: $gray
+    font-size: 0.8em
+
+  a
+    font-weight: normal
+    font-size: 1.1em
+    color: $accent
+    text-decoration: none
+
+  p
+    color: $gray
+

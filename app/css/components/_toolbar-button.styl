@@ -1,0 +1,34 @@
+.toolbar-button
+  &
+    padding: 15px 0
+    display: block
+    text-align: center
+    text-decoration: none
+    color: white
+
+  .icon:before
+    ion-icon()
+    font-size: 32px
+    color: #a0b0c0
+    content: '\f1c5'
+
+  &:hover .icon:before
+    color: mix($accent, white, 50%)
+
+  &.selected .icon:before
+    color: white
+
+  span
+    display: block
+    text-align: center
+    display: none
+
+  &:nth-of-type(2)
+    .icon:before
+      content: '\f286'
+  &:nth-of-type(3)
+    .icon:before
+      content: '\f1c1'
+  &:nth-of-type(4)
+    .icon:before
+      content: '\f28a'
