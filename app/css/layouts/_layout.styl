@@ -2,7 +2,7 @@
  * layout, abs style
  */
 
-__.all
+____.all
   .app-toolbar
     abs: 0 auto 0 0
     width: $toolbar-width
@@ -39,6 +39,7 @@ __.all
     .news-listing
       flex: 1 0
 
+  // desktop
   @media (min-width: 768px)
     .app-toolbar
       flex: 0 0 $toolbar-width
@@ -51,11 +52,12 @@ __.all
     .content-pane
       flex: 1 0 70%
 
+  // mobile
   @media (max-width: 768px)
     &
       flex-direction: column
 
-    .news-pane
+    .news-pane, .content-pane
       flex: 1 1 80%
       order: 0
 
@@ -64,5 +66,12 @@ __.all
       height: $toolbar-width
       order: 1
 
-    .content-pane
-      display: none
+  // switching only on mobile
+  @media (max-width: 768px)
+    &.on-news
+      .content-pane
+        display: none
+
+    &.on-content
+      .news-pane
+        display: none

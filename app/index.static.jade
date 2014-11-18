@@ -4,6 +4,11 @@ html
     meta(charset='utf-8')
     title News reader
     link(rel='stylesheet' href='app.css')
+    script(src='//cdn.rawgit.com/visionmedia/page.js/1.4.1/page.js')
+    script(src='//zeptojs.com/zepto.min.js')
+    script(src='//cdn.rawgit.com/rstacruz/nprogress/v0.1.3/nprogress.js')
+    link(rel='stylesheet' href='//cdn.rawgit.com/rstacruz/nprogress/v0.1.3/nprogress.css')
+    script(src='app.js')
 
   body
     .all
@@ -42,11 +47,11 @@ html
             .news-item
               span.number= i
               h2
-                a(href='#/article/'+i)= headline
+                a(href='/article/'+i id='link-'+i)= headline
               p Submitted by anonymous
               p 4h ago · 8 comments
               .actions
-                a.comments(href='#/article/'+i)
+                a.comments(href='/article/'+i)
 
           +item(1, "Mars rover mistakenly lands on Venus instead")
           +item(2, "The strong snake shouted, the bland shape smiled")
@@ -61,11 +66,11 @@ html
       // Main content area
       .content-pane
         .content-head
-          a.back-button(href='#/')
+          a.back-button(href='')
         .content-area
           .article-heading
             .container
-              h1
+              h1(data-bind='article-title')
                 | Mars rover mistakenly lands on Venus instead
               p.domain
                 | news.time.com
@@ -87,3 +92,6 @@ html
               +comment("username", "On a day of the week, we will be later red. It will be steady early. Since a sleepy mouse, of the crazy dominator, they should pull sharply, then a tame butterfly is massively impressive. Once, it is last uneven. Eventually, he will be smooth above and beyond a cold shoulder.")
               +comment("username", "The bottom of the ocean was meeting definitely. She was not prickly of something since they were not only. He wasn't regularly the mauve appointment, however, they were not sharply inverted. They can't stand twice, and then the communication is her. The pessimistic aardvark will be blue. Of a gerbil, a deep blue sea will be an eagle, but a bottom of the ocean gave someone to me tomorrow.")
               +comment("username", "Now, a sour eel smiled while the crow is not the mongoose. With nothing, we will speak everything for rhymes and reasons. The super goose was last Chinese. The bottom of the ocean allowed the government agency to the judgement day.")
+
+    script.
+      require('js/routes')
