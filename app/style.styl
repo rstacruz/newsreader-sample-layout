@@ -52,21 +52,41 @@ __.all
   display: flex
   abs: 0 0 0 0
 
-  .app-toolbar
-    flex: 0 0 $toolbar-width
+  &
+    .news-sidebar
+      display: flex
+      flex-direction: column
 
-  .news-sidebar
-    flex: 1 1 30%
-    min-width: 200px
-    max-width: 300px
-    display: flex
-    flex-direction: column
+    .news-head
+      flex: 0 0 50px
 
-  .news-head
-    flex: 0 0 50px
+    .news-listing
+      flex: 1 0
 
-  .news-listing
-    flex: 1 0
+  @media (min-width: 768px)
+    .app-toolbar
+      flex: 0 0 $toolbar-width
 
-  .content-area
-    flex: 1 0 70%
+    .news-sidebar
+      flex: 1 1 30%
+      min-width: 200px
+      max-width: 300px
+
+    .content-area
+      flex: 1 0 70%
+
+  @media (max-width: 768px)
+    &
+      flex-direction: column
+
+    .news-sidebar
+      flex: 1 1 80%
+      order: 0
+
+    .app-toolbar
+      flex: 0 0 $toolbar-width
+      height: $toolbar-width
+      order: 1
+
+    .content-area
+      display: none

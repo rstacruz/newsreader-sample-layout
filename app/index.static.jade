@@ -9,21 +9,25 @@ html
     .all
       // Toolbar
       .app-toolbar
-        .app-icon
-          | N
-
-        a.toolbar-button.selected(href='')
-          i.icon
-          span Home
-        a.toolbar-button(href='')
-          i.icon
-          span Top
-        a.toolbar-button(href='')
-          i.icon
-          span All
-        a.toolbar-button(href='')
-          i.icon
-          span Messages
+        .item
+          .app-icon
+            | N
+        .item
+          a.toolbar-button.one.selected(href='')
+            i.icon
+            span Home
+        .item
+          a.toolbar-button.two(href='')
+            i.icon
+            span Top
+        .item
+          a.toolbar-button.three(href='')
+            i.icon
+            span All
+        .item
+          a.toolbar-button.four(href='')
+            i.icon
+            span Messages
 
       .news-sidebar
         // Head
@@ -41,8 +45,8 @@ html
                 a(href='#/article/'+i)= headline
               p Submitted by anonymous
               p 4h ago · 8 comments
-            .actions
-              a.comments(href='#/article/'+i)
+              .actions
+                a.comments(href='#/article/'+i)
 
           +item(1, "Mars rover mistakenly lands on Venus instead")
           +item(2, "The strong snake shouted, the bland shape smiled")

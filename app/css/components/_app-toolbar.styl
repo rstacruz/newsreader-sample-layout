@@ -1,3 +1,40 @@
 .app-toolbar
   background: $midnight
+  display: flex
   padding: 15px
+
+  .item
+    text-align: center
+
+  // desktop
+  @media (min-width: 768px)
+    &
+      flex-direction: column
+
+    .item
+      min-height: 60px
+
+    .item:nth-child(1)
+      min-height: 80px
+
+  // mobile
+  @media (max-width: 768px)
+    &
+      justify-content: space-around
+      flex-direction: row
+
+    .item
+      flex: 0 0 60px
+
+    .toolbar-button
+      position: relative
+      top: -5px
+
+    .item:nth-child(1)
+      order: 1
+    .item:nth-child(2),
+    .item:nth-child(3)
+      order: 0
+    .item:nth-child(4),
+    .item:nth-child(5)
+      order: 2
