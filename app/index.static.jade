@@ -29,7 +29,7 @@ html
             i.icon
             span Messages
 
-      .news-sidebar
+      .news-pane
         // Head
         .news-head
           h1 Top stories
@@ -59,28 +59,31 @@ html
           +item(9, "Cubes are changing us to themselves")
 
       // Main content area
-      .content-area
-        .article-heading
-          .container
-            h1
-              | Mars rover mistakenly lands on Venus instead
-            p.domain
-              | news.time.com
-            p.details
-              Submitted by anonymous 8h ago
+      .content-pane
+        .content-head
+          a.back-button(href='#/')
+        .content-area
+          .article-heading
+            .container
+              h1
+                | Mars rover mistakenly lands on Venus instead
+              p.domain
+                | news.time.com
+              p.details
+                Submitted by anonymous 8h ago
 
-        .article-comments
-          .container
-            mixin comment(user, comment)
-              .comment-item
-                h4
-                  strong= user
-                  em 24h ago
-                p= comment
+          .article-comments
+            .container
+              mixin comment(user, comment)
+                .comment-item
+                  h4
+                    strong= user
+                    em 24h ago
+                  p= comment
 
-            +comment("leeroyjenkins", "The shape wasn't negative or the wonderful picture. Thrice, twice, they were themselves. The time of day was changing nothing to her yesterday. An eagle is wooden or the rhyme and reason. An African flamingo will have him tomorrow until she will be nicely light. She will run heavily. We will be sharply guilty.")
-            +comment("rstacruz", "She wasn't Romanian. A city can't speak itself to the vehicle until a horizontal park. He won't be allowing something for herself, and then she will be heavily impressive and mauve. Nicely, next to a guilty mongoose, because of something, a calling of the wild is herself.")
-            +comment("username", "The Czech dolphin has her. The piece will be himself, however, the tired aardvark will be running. They will have oranges while they will get tomorrow. She allowed the salty light to you over the bottom of the ocean. Often, a light will give the arrangement for a bad coyote.")
-            +comment("username", "On a day of the week, we will be later red. It will be steady early. Since a sleepy mouse, of the crazy dominator, they should pull sharply, then a tame butterfly is massively impressive. Once, it is last uneven. Eventually, he will be smooth above and beyond a cold shoulder.")
-            +comment("username", "The bottom of the ocean was meeting definitely. She was not prickly of something since they were not only. He wasn't regularly the mauve appointment, however, they were not sharply inverted. They can't stand twice, and then the communication is her. The pessimistic aardvark will be blue. Of a gerbil, a deep blue sea will be an eagle, but a bottom of the ocean gave someone to me tomorrow.")
-            +comment("username", "Now, a sour eel smiled while the crow is not the mongoose. With nothing, we will speak everything for rhymes and reasons. The super goose was last Chinese. The bottom of the ocean allowed the government agency to the judgement day.")
+              +comment("leeroyjenkins", "The shape wasn't negative or the wonderful picture. Thrice, twice, they were themselves. The time of day was changing nothing to her yesterday. An eagle is wooden or the rhyme and reason. An African flamingo will have him tomorrow until she will be nicely light. She will run heavily. We will be sharply guilty.")
+              +comment("rstacruz", "She wasn't Romanian. A city can't speak itself to the vehicle until a horizontal park. He won't be allowing something for herself, and then she will be heavily impressive and mauve. Nicely, next to a guilty mongoose, because of something, a calling of the wild is herself.")
+              +comment("username", "The Czech dolphin has her. The piece will be himself, however, the tired aardvark will be running. They will have oranges while they will get tomorrow. She allowed the salty light to you over the bottom of the ocean. Often, a light will give the arrangement for a bad coyote.")
+              +comment("username", "On a day of the week, we will be later red. It will be steady early. Since a sleepy mouse, of the crazy dominator, they should pull sharply, then a tame butterfly is massively impressive. Once, it is last uneven. Eventually, he will be smooth above and beyond a cold shoulder.")
+              +comment("username", "The bottom of the ocean was meeting definitely. She was not prickly of something since they were not only. He wasn't regularly the mauve appointment, however, they were not sharply inverted. They can't stand twice, and then the communication is her. The pessimistic aardvark will be blue. Of a gerbil, a deep blue sea will be an eagle, but a bottom of the ocean gave someone to me tomorrow.")
+              +comment("username", "Now, a sour eel smiled while the crow is not the mongoose. With nothing, we will speak everything for rhymes and reasons. The super goose was last Chinese. The bottom of the ocean allowed the government agency to the judgement day.")

@@ -1,0 +1,19 @@
+.content-pane
+  &
+    display: flex
+    flex-direction: column
+
+  .container
+    padding: ($pad * 2) $pad
+    max-width: 600px
+    margin: 0 auto
+
+  .content-head
+    flex: 0 0 $heading-height
+
+    @media (min-width: 768px)
+      display: none
+
+  .content-area
+    overflow-y: auto
+    flex: 1 0 90%

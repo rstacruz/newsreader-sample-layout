@@ -1,0 +1,25 @@
+.content-head
+  border-bottom: solid 1px $line
+  height: $heading-height
+  line-height: $heading-height
+
+.back-button
+  &
+    margin: 0
+    padding: 0
+    outline: 0
+    border: 0
+    background: transparent
+    cursor: pointer
+    display: inline-block
+
+  &
+    height: $heading-height
+    width: @height
+    line-height: @height
+    text-align: center
+
+  &:before
+    ion-icon('ios7-arrow-left')
+    font-size: 24px
+    color: $accent
