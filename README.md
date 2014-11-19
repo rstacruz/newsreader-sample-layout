@@ -1,6 +1,8 @@
 # Flexbox news reader example
 
-![](screencast.gif)
+[![](screencast.gif)][url]
+
+**[View demo ▸][url]**
 
 ### Source:
 
@@ -11,3 +13,6 @@
 ### [Brunch](http://brunch.io)
 
 Built with Brunch. ([instructions](https://github.com/brunch/dead-simple/blob/master/README.md))
+
+[url]: http://ricostacruz.com/newsreader-sample-layout
+
