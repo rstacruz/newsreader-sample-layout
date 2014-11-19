@@ -149,6 +149,7 @@
 require.register("js/routes", function(exports, require, module) {
 // visionmedia/page.js
 
+// article
 page('/article/:id', function (ctx) {
   // switch panes
   $('.all').attr('class', 'all on-content');
@@ -173,6 +174,7 @@ page('/article/:id', function (ctx) {
   }, 500);
 });
 
+// home
 page('/', function (ctx) {
   // switch panes
   $('.all').attr('class', 'all on-news');
@@ -182,7 +184,14 @@ page('/', function (ctx) {
   $("a.selected").removeClass('selected');
 });
 
-page.base(location.pathname.replace(/\/$/, ''));
+// reset
+page('*', function (ctx) {
+  setTimeout(function () {
+    page.replace('/');
+  });
+});
+
+// page.base(location.pathname.replace(/\/$/, ''));
 page({ hashbang: true });
 
 });
