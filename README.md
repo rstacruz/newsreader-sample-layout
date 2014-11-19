@@ -1,3 +1,5 @@
+![](screencast.gif)
+
 - HTML: **[app/index.static.jade](app/index.static.jade)**
 - CSS: **[app/css/](app/css/)**
 - JS: **[app/js/routes.js](app/js/routes.js)**
