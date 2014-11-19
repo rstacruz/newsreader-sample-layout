@@ -144,7 +144,7 @@ table {
   -webkit-font-smoothing: antialiased !important;
   -moz-osx-font-smoothing: grayscale;
 }
-@import url("http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700");
+@import url("http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,700");
 @font-face {
   font-family: "Ionicons";
   src: url("//code.ionicframework.com/ionicons/1.5.2/fonts/ionicons.eot?v=1.5.2");
@@ -166,7 +166,7 @@ td,
 textarea,
 input {
   line-height: 1.5;
-  font-family: 'source sans pro', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   font-size: 1em;
 }
 html,
