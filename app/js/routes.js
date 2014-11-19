@@ -1,4 +1,7 @@
+// visionmedia/page.js
+
 page('/article/:id', function (ctx) {
+  // switch panes
   $('.all').attr('class', 'all on-content');
   $(".content-area").show();
 
@@ -11,6 +14,7 @@ page('/article/:id', function (ctx) {
   $("a.selected").removeClass('selected');
   $link.addClass('selected');
 
+  // pretend to load comments
   $(".comment-item").hide();
   NProgress.start();
 
@@ -21,8 +25,12 @@ page('/article/:id', function (ctx) {
 });
 
 page('/', function (ctx) {
+  // switch panes
   $('.all').attr('class', 'all on-news');
   $(".content-area").hide();
+
+  // unhighlight
+  $("a.selected").removeClass('selected');
 });
 
 page({ hashbang: true });
