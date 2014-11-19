@@ -1,8 +1,8 @@
 # Flexbox news reader example
 
-[![](screencast.gif)][url]
-
 **[View demo ▸][url]**
+
+[![](screencast.gif)][url]
 
 ----
 
