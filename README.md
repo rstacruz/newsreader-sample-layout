@@ -17,4 +17,4 @@ Flexbox news reader example.<br>
 Built with Brunch.io. ([instructions](https://github.com/brunch/dead-simple/blob/master/README.md))
 
 [url]: http://ricostacruz.com/newsreader-sample-layout
-[pres]: https://speakerdeck.com/rstacruz/using-flexbox-to-save-your-sanity
+[pres]: https://speakerdeck.com/rstacruz/using-css-flexbox-to-save-your-sanity
